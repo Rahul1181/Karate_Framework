@@ -28,6 +28,7 @@ replay_pid*
 #Folders
 target/
 *config.properties
+.mvn
 
 #intellJ files
 *.iml
