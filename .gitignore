@@ -29,6 +29,7 @@ replay_pid*
 target/
 *config.properties
 .mvn
+.vscode
 
 #intellJ files
 *.iml
