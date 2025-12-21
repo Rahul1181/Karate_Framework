@@ -6,7 +6,8 @@ class RunSampleOutputTest {
 
     @Karate.Test
     Karate testSampleOutput() {
-        return Karate.run("classpath:features/").tags("@jsonFiles");
+        //return Karate.run("classpath:features/").tags("@jsonFiles");
+        return Karate.run("classpath:features/").tags("@gorest");
 
     }
 }
