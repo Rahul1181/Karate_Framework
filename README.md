@@ -37,6 +37,9 @@ Scenario: Get user and validate response
   And match response.users[*].age contains only 25 30 35
 ```
 
+**Run specific feature file in VS terminal** : `mvn test -Dkarate.options="--tags @smoke"`
+**Run all the feature file in VS termincal** : `mvn test -Dkarate="src/test/resources/features"`
+
 ## **Pros & Cons**
 
 ### **Advantages:**
