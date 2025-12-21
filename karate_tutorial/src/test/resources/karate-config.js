@@ -7,6 +7,8 @@ function fn() {
   config.baseUrls = {
     userService: "https://gorest.co.in",
   };
+  // load common headers
+  config.commonHeaders = karate.callSingle('classpath:config/header.js');
 
   return config;
 }

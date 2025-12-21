@@ -8,14 +8,25 @@ Feature: This scenario covers GoRest API testing
         And params userQuery
         When method Get
         Then status 200
+
         * print 'Request headers:', karate.prevRequest.headers
+
+        # Print raw response (best practice while debugging)
         * print "Json Object response is: " + karate.pretty(response)
+
+        # Extract first object from array
         * def userDataResponse = response[0]
+
+        # Log extracted object
         * karate.log("User data", userDataResponse)
+
+        # Field extraction
         * def userDataId = userDataResponse.id
         * def userDataName = userDataResponse.name
         * def userDataEmail = userDataResponse.email
         * def userDataGender = userDataResponse.gender
+        
+        # Assertion
         * match userDataId == 8115615
         * match userDataName == "Elakshi Gowda"
         * match userDataEmail == "gowda_elakshi@green.example"
