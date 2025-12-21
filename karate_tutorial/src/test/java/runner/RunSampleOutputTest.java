@@ -8,7 +8,8 @@ class RunSampleOutputTest {
     Karate testSampleOutput() {
         //return Karate.run("classpath:features/").tags("@jsonFiles");
         //return Karate.run("classpath:features/").tags("@gorest");
-        return Karate.run("classpath:features/").tags("@header");
+        //return Karate.run("classpath:features/").tags("@header");
+        return Karate.run("classpath:features/").tags("@Oauth");
 
     }
 }
