@@ -2,10 +2,11 @@ package runner;
 
 import com.intuit.karate.junit5.Karate;
 
-class SampleOutputTest {
+class RunSampleOutputTest {
 
     @Karate.Test
     Karate testSampleOutput() {
-        return Karate.run("classpath:features/sampleOutput.feature");
+        return Karate.run("classpath:features/").tags("@jsonFiles");
+
     }
 }
