@@ -19,3 +19,4 @@ Feature: This feature covers creating the user and then deleting the user
         Given path "public","v2","users",userId
         When method Get
         Then status 404
+        And match response.message == "Resource not found"
