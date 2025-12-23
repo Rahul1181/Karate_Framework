@@ -1,4 +1,4 @@
-Feature: This feature covers the PUT method
+Feature: This feature covers updating the user data using PUT method
 
     Background:
         * url baseUrls.userService
