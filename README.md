@@ -73,9 +73,19 @@ Scenario: Get user and validate response
 - When you need extensive custom reporting
 
 # Run tests
+- To run specific feature file
 ```terminal
 mvn test -Dtest=TestRunner
 ```
+- To run a clean build it deletes all the older report file
+```terminal
+mvn clean test
+```
+- To run the test, without deleting the older report 
+```terminal
+mvn test
+```
+
 
 ## Golden Rule:
 - Use call / call read() to execute a feature
