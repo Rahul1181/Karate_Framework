@@ -27,9 +27,9 @@ Feature: This scenario covers GoRest API testing
         * def userDataGender = userDataResponse.gender
         
         # Assertion
-        * match userDataId == 8115615
-        * match userDataName == "Elakshi Gowda"
-        * match userDataEmail == "gowda_elakshi@green.example"
+        * match userDataId == 8115525
+        * match userDataName == "Brajendra Guha CPA"
+        * match userDataEmail == "cpa_brajendra_guha@jerde.example"
         * match userDataGender == "male"
 
     @gorest
