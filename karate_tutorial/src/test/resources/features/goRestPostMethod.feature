@@ -6,19 +6,19 @@ Feature: This feature covers the testing of the https method
         * def randomString =
             """
             function(lenOfStr){
-                var text ="";
-                var pattern ="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-                for(var i=0;i<lenOfStr;i++){
-                    text += pattern.charAt(Math.floor(Math.random() * pattern.length()));
-                    }
-                return text;
+            var text ="";
+            var pattern ="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            for(var i=0;i<lenOfStr;i++){
+            text += pattern.charAt(Math.floor(Math.random() * pattern.length()));
             }
-            
-            """
-            * def randomEmail = randomString(10)
-            * print randomEmail
+            return text;
+            }
 
-    @method
+            """
+        * def randomEmail = randomString(10)
+        * print randomEmail
+
+    @methodPost
     Scenario: This scenario covers the POST method
         * def userData = read("classpath:data/user.json")
         * userData.email = randomEmail + "@gmail.com"
@@ -30,8 +30,11 @@ Feature: This feature covers the testing of the https method
         And match $.id == "#present"
         And match $.name == "User58"
         And match $.email == userData.email
+        * print karate.log(response)
 
-        
 
-    
+
+
+
+
 
