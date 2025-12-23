@@ -76,3 +76,7 @@ Scenario: Get user and validate response
 ```terminal
 mvn test -Dtest=TestRunner
 ```
+
+## Golden Rule:
+- Use call / call read() to execute a feature
+- Use read() only for static data (JSON, JS, CSV)
